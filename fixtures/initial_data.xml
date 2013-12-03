@@ -1,0 +1,16 @@
+<django-objects version="1.0">
+    <object pk="1" model="auth.user">
+        <field type="CharField" name="username">toto</field>
+        <field type="CharField" name="first_name">toto</field>
+        <field type="CharField" name="last_name">tata</field>
+        <field type="CharField" name="email">toto@test.local</field>
+        <field type="CharField" name="password">sha1$9e204$9c0d4a5067e332523dfca31942c5501e3e8b288c</field>
+        <field type="BooleanField" name="is_staff">True</field>
+        <field type="BooleanField" name="is_active">True</field>
+        <field type="BooleanField" name="is_superuser">True</field>
+        <field type="DateTimeField" name="last_login">2013-05-06T15:27:28.348679</field>
+        <field type="DateTimeField" name="date_joined">2012-01-16T14:12:37</field>
+        <field to="auth.group" name="groups" rel="ManyToManyRel"></field>
+        <field to="auth.permission" name="user_permissions" rel="ManyToManyRel"></field>
+    </object>
+</django-objects>
