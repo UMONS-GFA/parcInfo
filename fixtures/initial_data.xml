@@ -1,10 +1,10 @@
 <django-objects version="1.0">
     <object pk="1" model="auth.user">
-        <field type="CharField" name="username">toto</field>
-        <field type="CharField" name="first_name">toto</field>
-        <field type="CharField" name="last_name">tata</field>
-        <field type="CharField" name="email">toto@test.local</field>
-        <field type="CharField" name="password">sha1$9e204$9c0d4a5067e332523dfca31942c5501e3e8b288c</field>
+        <field type="CharField" name="username">admin</field>
+        <field type="CharField" name="first_name"></field>
+        <field type="CharField" name="last_name"></field>
+        <field type="CharField" name="email"></field>
+        <field type="CharField" name="password">pbkdf2_sha256$10000$Ugc4zw9aO7OH$ZCzFwgEq0NvwrzXIqq/UVwD+RjNq/AHmlyFS2aWFXUY=</field>
         <field type="BooleanField" name="is_staff">True</field>
         <field type="BooleanField" name="is_active">True</field>
         <field type="BooleanField" name="is_superuser">True</field>
