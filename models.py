@@ -20,7 +20,7 @@ class GraphicCard(models.Model):
     id_graphic_card = models.AutoField(primary_key=True)
     manufacturer = models.CharField(verbose_name=_('manufacturer'), max_length=255)
     type_graphic_card = models.CharField(verbose_name=_('type'), max_length=255)
-    memory_size = models.IntegerField(verbose_name=_('memory size'))
+    memory_size = models.IntegerField(verbose_name=_('memory size'), help_text=_('in Mo'))
 
     class Meta:
         verbose_name = _('graphic card')
@@ -48,7 +48,7 @@ class Computer(models.Model):
     serial = models.IntegerField(verbose_name=_('serial_number'), unique=True)
     name = models.CharField(verbose_name=_('name'), max_length=255, unique=True)
     usage_note = models.TextField(verbose_name=_('usage note'), blank=True, null=True)
-    memory_size = models.IntegerField(verbose_name=_('memory size'))
+    memory_size = models.IntegerField(verbose_name=_('memory size'), help_text=_('in Mo'))
     ref_user = models.ForeignKey(User, verbose_name=_('user'))
 
     class Meta:
