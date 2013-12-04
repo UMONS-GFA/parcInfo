@@ -6,20 +6,20 @@ from django.utils.translation import ugettext_lazy as _
 class Processor(models.Model):
     id_processor = models.AutoField(primary_key=True)
     manufacturer = models.CharField(verbose_name=_('manufacturer'), max_length=255)
-    type = models.CharField(verbose_name=_('type'), max_length=255)
+    type_processor = models.CharField(verbose_name=_('type'), max_length=255)
 
     class Meta:
         verbose_name = _('processor')
         verbose_name_plural = _('processors')
 
     def __unicode__(self):
-        return self.manufacturer + " " + self.type
+        return self.manufacturer + " " + self.type_processor
 
 
 class GraphicCard(models.Model):
     id_graphic_card = models.AutoField(primary_key=True)
     manufacturer = models.CharField(verbose_name=_('manufacturer'), max_length=255)
-    type = models.CharField(verbose_name=_('type'), max_length=255)
+    type_graphic_card = models.CharField(verbose_name=_('type'), max_length=255)
     memory_size = models.IntegerField(verbose_name=_('memory size'))
 
     class Meta:
@@ -27,7 +27,7 @@ class GraphicCard(models.Model):
         verbose_name_plural = _('graphic cards')
 
     def __unicode__(self):
-        return self.manufacturer + " " + self.type
+        return self.manufacturer + " " + self.type_graphic_card
 
 
 class HardDrive(models.Model):
