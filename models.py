@@ -32,7 +32,7 @@ class GraphicCard(models.Model):
 
 class HardDrive(models.Model):
     id_hard_drive = models.AutoField(primary_key=True)
-    size = models.IntegerField(verbose_name=_('size'))
+    size = models.IntegerField(verbose_name=_('size'), help_text=_('in Go'))
     flash_drive = models.BooleanField(verbose_name=_('ssd'), default=False)
 
     class Meta:
@@ -61,7 +61,7 @@ class Computer(models.Model):
 
 class Desktop(Computer):
     ref_processor = models.ForeignKey(Processor, verbose_name=_('processor'))
-    ref_hard_drive = models.ForeignKey(HardDrive, verbose_name=_('hard drive'))
+    ref_hard_drive = models.ForeignKey(HardDrive, verbose_name=_('hard drive'), help_text=_('in Go'))
 
     class Meta:
         verbose_name = _('desktop')
@@ -70,7 +70,7 @@ class Desktop(Computer):
 
 class Laptop(Computer):
     ref_processor = models.ForeignKey(Processor, verbose_name=_('processor'))
-    ref_hard_drive = models.ForeignKey(HardDrive, verbose_name=_('hard drive'))
+    ref_hard_drive = models.ForeignKey(HardDrive, verbose_name=_('hard drive'), help_text=_('in Go'))
 
     class Meta:
         verbose_name = _('laptop')
@@ -81,7 +81,7 @@ class Server(Computer):
     ref_processor = models.ManyToManyField(Processor, verbose_name=_('processor'))
     ref_graphic_card = models.ManyToManyField(GraphicCard, verbose_name=_('graphic card'))
     nb_disk = models.IntegerField(default=1, verbose_name=_('number of disk'))
-    ref_hard_drive = models.ManyToManyField(HardDrive, verbose_name=_('hard drive'))
+    ref_hard_drive = models.ManyToManyField(HardDrive, verbose_name=_('hard drive'), help_text=_('in Go'))
 
     class Meta:
         verbose_name = _('server')
