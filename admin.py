@@ -3,6 +3,7 @@ __author__ = 'Christophe Bastin'
 from django.contrib import admin
 from models import *
 
+
 class ComputerAdmin(admin.ModelAdmin):
     list_display = ('ref_user', 'name')
 
