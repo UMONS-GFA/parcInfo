@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-04 11:07+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+
+#: models.py:8 models.py:21
+msgid "manufacturer"
+msgstr "fabriquant"
+
+#: models.py:9 models.py:22
+msgid "type"
+msgstr "modèle"
+
+#: models.py:12 models.py:62 models.py:71 models.py:80
+msgid "processor"
+msgstr "processeur"
+
+#: models.py:13
+msgid "processors"
+msgstr "processeurs"
+
+#: models.py:23
+msgid "memory size"
+msgstr "quantité de mémoire"
+
+#: models.py:26 models.py:81
+msgid "graphic card"
+msgstr "carte graphique"
+
+#: models.py:27
+msgid "graphic cards"
+msgstr "cartes graphiques"
+
+#: models.py:35
+msgid "size"
+msgstr "taille"
+
+#: models.py:36
+msgid "ssd"
+msgstr "ssd"
+
+#: models.py:39 models.py:63 models.py:72 models.py:83
+msgid "hard drive"
+msgstr "disque dur"
+
+#: models.py:40
+msgid "hard drives"
+msgstr "disques durs"
+
+#: models.py:48
+msgid "serial_number"
+msgstr "numéro de série"
+
+#: models.py:49
+msgid "name"
+msgstr "nom"
+
+#: models.py:50
+msgid "usage note"
+msgstr "note d'utilisation"
+
+#: models.py:51
+msgid "user"
+msgstr "utilisateur"
+
+#: models.py:54
+msgid "computer"
+msgstr "ordinateur"
+
+#: models.py:55
+msgid "computers"
+msgstr "ordinateurs"
+
+#: models.py:66
+msgid "desktop"
+msgstr "ordinateur de bureau"
+
+#: models.py:67
+msgid "desktops"
+msgstr "ordinateurs de bureau"
+
+#: models.py:75
+msgid "laptop"
+msgstr "ordinateur portable"
+
+#: models.py:76
+msgid "laptops"
+msgstr "ordinateurs portables"
+
+#: models.py:82
+msgid "number of disk"
+msgstr "nombre de disques"
+
+#: models.py:86
+msgid "server"
+msgstr "serveur"
+
+#: models.py:87
+msgid "servers"
+msgstr "serveurs"
