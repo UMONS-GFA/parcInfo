@@ -48,6 +48,7 @@ class Computer(models.Model):
     serial = models.IntegerField(verbose_name=_('serial_number'), unique=True)
     name = models.CharField(verbose_name=_('name'), max_length=255, unique=True)
     usage_note = models.TextField(verbose_name=_('usage note'), blank=True, null=True)
+    memory_size = models.IntegerField(verbose_name=_('memory size'))
     ref_user = models.ForeignKey(User, verbose_name=_('user'))
 
     class Meta:
