@@ -7,7 +7,21 @@ class CnxServerProcessor(models.Model):
     id_cnx_server_processor = models.AutoField(primary_key=True)
     ref_server = models.ForeignKey('Server')
     ref_processor = models.ForeignKey('Processor')
-    nbr_processor = models.IntegerField(verbose_name=_('number of processor'), default=1)
+    nbr_processor = models.IntegerField(verbose_name=_('number of processors'), default=1)
+
+
+class CnxServerGraphicCard(models.Model):
+    id_cnx_server_graphicCard = models.AutoField(primary_key=True)
+    ref_server = models.ForeignKey('Server')
+    ref_graphic_card = models.ForeignKey('GraphicCard')
+    nbr_graphic_card = models.IntegerField(verbose_name=_('number of graphic cards'), default=1)
+
+
+class CnxServerHardDrive(models.Model):
+    id_cnx_server_hardDrive = models.AutoField(primary_key=True)
+    ref_server = models.ForeignKey('Server')
+    ref_hard_drive = models.ForeignKey('HardDrive')
+    nbr_hard_drive = models.IntegerField(verbose_name=_('number of hard drive'), default=1)
 
 
 class Processor(models.Model):
@@ -99,8 +113,10 @@ class Laptop(Computer):
 
 class Server(Computer):
     ref_processor = models.ManyToManyField(Processor, through='CnxServerProcessor', verbose_name=_('processor'))
-    ref_graphic_card = models.ManyToManyField(GraphicCard, verbose_name=_('graphic card'))
-    ref_hard_drive = models.ManyToManyField(HardDrive, verbose_name=_('hard drive'), help_text=_('in GB'))
+    ref_graphic_card = models.ManyToManyField(GraphicCard, through='CnxServerGraphicCard',
+                                              verbose_name=_('graphic card'))
+    ref_hard_drive = models.ManyToManyField(HardDrive, through='CnxServerHardDrive', verbose_name=_('hard drive'),
+                                            help_text=_('in GB'))
 
     class Meta:
         verbose_name = _('server')
