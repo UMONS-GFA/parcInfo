@@ -20,7 +20,7 @@ class LaptopAdmin(admin.ModelAdmin):
 
 class ServerAdmin(admin.ModelAdmin):
     list_display = ('name', 'serial')
-    fields = ('serial', 'name', 'ref_user', 'ref_processor', 'memory_size', 'ref_hard_drive', 'usage_note')
+    fields = ('serial', 'name', 'ref_user', 'ref_processor', 'memory_size', 'nb_disk', 'ref_hard_drive', 'usage_note')
 
 admin.site.register(Processor)
 admin.site.register(GraphicCard)
