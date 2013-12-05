@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-04 11:07+0100\n"
+"POT-Creation-Date: 2013-12-04 14:17+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,7 @@ msgstr "fabriquant"
 msgid "type"
 msgstr "modèle"
 
-#: models.py:12 models.py:62 models.py:71 models.py:80
+#: models.py:12 models.py:63 models.py:72 models.py:81
 msgid "processor"
 msgstr "processeur"
 
@@ -34,11 +34,15 @@ msgstr "processeur"
 msgid "processors"
 msgstr "processeurs"
 
-#: models.py:23
+#: models.py:23 models.py:51
 msgid "memory size"
 msgstr "quantité de mémoire"
 
-#: models.py:26 models.py:81
+#: models.py:23 models.py:51
+msgid "in Mo"
+msgstr "en Mo"
+
+#: models.py:26 models.py:82
 msgid "graphic card"
 msgstr "carte graphique"
 
@@ -50,11 +54,15 @@ msgstr "cartes graphiques"
 msgid "size"
 msgstr "taille"
 
+#: models.py:35 models.py:64 models.py:73 models.py:84
+msgid "in Go"
+msgstr "en Go"
+
 #: models.py:36
 msgid "ssd"
 msgstr "ssd"
 
-#: models.py:39 models.py:63 models.py:72 models.py:83
+#: models.py:39 models.py:64 models.py:73 models.py:84
 msgid "hard drive"
 msgstr "disque dur"
 
@@ -74,42 +82,48 @@ msgstr "nom"
 msgid "usage note"
 msgstr "note d'utilisation"
 
-#: models.py:51
+#: models.py:52
 msgid "user"
 msgstr "utilisateur"
 
-#: models.py:54
+#: models.py:55
 msgid "computer"
 msgstr "ordinateur"
 
-#: models.py:55
+#: models.py:56
 msgid "computers"
 msgstr "ordinateurs"
 
-#: models.py:66
+#: models.py:67
 msgid "desktop"
 msgstr "ordinateur de bureau"
 
-#: models.py:67
+#: models.py:68
 msgid "desktops"
 msgstr "ordinateurs de bureau"
 
-#: models.py:75
+#: models.py:76
 msgid "laptop"
 msgstr "ordinateur portable"
 
-#: models.py:76
+#: models.py:77
 msgid "laptops"
 msgstr "ordinateurs portables"
 
-#: models.py:82
+#: models.py:83
 msgid "number of disk"
 msgstr "nombre de disques"
 
-#: models.py:86
+#: models.py:87
 msgid "server"
 msgstr "serveur"
 
-#: models.py:87
+#: models.py:88
 msgid "servers"
 msgstr "serveurs"
+
+#~ msgid "mb"
+#~ msgstr "mb"
+
+#~ msgid "MB"
+#~ msgstr "MB"
