@@ -43,6 +43,18 @@ class HardDrive(models.Model):
         return str(self.size)
 
 
+class Localisation(models.Model):
+    id_localisation = models.AutoField(primary_key=True)
+    localisation_name = models.CharField(max_length=255, verbose_name=_('localisation name'))
+
+    class Meta:
+        verbose_name = _('localisation')
+        verbose_name_plural = _('localisations')
+
+    def __unicode__(self):
+        return self.localisation_name
+
+
 class Computer(models.Model):
     id_computer = models.AutoField(primary_key=True)
     serial = models.IntegerField(verbose_name=_('serial_number'), unique=True)
@@ -50,6 +62,7 @@ class Computer(models.Model):
     usage_note = models.TextField(verbose_name=_('usage note'), blank=True, null=True)
     memory_size = models.IntegerField(verbose_name=_('memory size'), help_text=_('in MB'))
     ref_user = models.ForeignKey(User, verbose_name=_('user'))
+    localisation = models.ForeignKey(Localisation, verbose_name=_('localisation'))
 
     class Meta:
         verbose_name = _('computer')
