@@ -7,7 +7,7 @@ class CnxServerProcessor(models.Model):
     id_cnx_server_processor = models.AutoField(primary_key=True)
     ref_server = models.ForeignKey('Server')
     ref_processor = models.ForeignKey('Processor')
-    nbr_processor = models.IntegerField(verbose_name=_('number of processor'))
+    nbr_processor = models.IntegerField(verbose_name=_('number of processor'), default=1)
 
 
 class Processor(models.Model):
