@@ -3,6 +3,13 @@ from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 
 
+class CnxServerProcessor(models.Model):
+    id_cnx_server_processor = models.AutoField(primary_key=True)
+    ref_server = models.ForeignKey('Server')
+    ref_processor = models.ForeignKey('Processor')
+    nbr_processor = models.IntegerField(verbose_name=_('number of processor'))
+
+
 class Processor(models.Model):
     id_processor = models.AutoField(primary_key=True)
     manufacturer = models.CharField(verbose_name=_('manufacturer'), max_length=255)
@@ -91,9 +98,8 @@ class Laptop(Computer):
 
 
 class Server(Computer):
-    ref_processor = models.ManyToManyField(Processor, verbose_name=_('processor'))
+    ref_processor = models.ManyToManyField(Processor, through='CnxServerProcessor', verbose_name=_('processor'))
     ref_graphic_card = models.ManyToManyField(GraphicCard, verbose_name=_('graphic card'))
-    nb_disk = models.IntegerField(default=1, verbose_name=_('number of disk'))
     ref_hard_drive = models.ManyToManyField(HardDrive, verbose_name=_('hard drive'), help_text=_('in GB'))
 
     class Meta:
