@@ -3,11 +3,17 @@ from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 
 
+# connection models
+
 class CnxServerProcessor(models.Model):
     id_cnx_server_processor = models.AutoField(primary_key=True)
     ref_server = models.ForeignKey('Server')
     ref_processor = models.ForeignKey('Processor')
     nbr_processor = models.IntegerField(verbose_name=_('number of processors'), default=1)
+
+    class Meta:
+        verbose_name = _('processor')
+        verbose_name_plural = _('processors')
 
 
 class CnxServerGraphicCard(models.Model):
@@ -16,12 +22,21 @@ class CnxServerGraphicCard(models.Model):
     ref_graphic_card = models.ForeignKey('GraphicCard')
     nbr_graphic_card = models.IntegerField(verbose_name=_('number of graphic cards'), default=1)
 
+    class Meta:
+        verbose_name = _('graphic card')
+        verbose_name_plural = _('graphic cards')
+
 
 class CnxServerHardDrive(models.Model):
     id_cnx_server_hardDrive = models.AutoField(primary_key=True)
     ref_server = models.ForeignKey('Server')
     ref_hard_drive = models.ForeignKey('HardDrive')
     nbr_hard_drive = models.IntegerField(verbose_name=_('number of hard drive'), default=1)
+
+    class Meta:
+        verbose_name = _('hard drive')
+        verbose_name_plural = _('hard drives')
+# end of connection models
 
 
 class Processor(models.Model):
