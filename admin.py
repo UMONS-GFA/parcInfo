@@ -19,16 +19,13 @@ class CnxServerHardDriveInline(admin.TabularInline):
 
 
 class ProcessorAdmin(admin.ModelAdmin):
-    inlines = (CnxServerProcessorInline,)
-
+    pass
 
 class GraphicCardAdmin(admin.ModelAdmin):
-    inlines = (CnxServerGraphicCardInline,)
-
+    pass
 
 class HardDriveAdmin(admin.ModelAdmin):
-    inlines = (CnxServerHardDriveInline,)
-
+    pass
 
 class ComputerAdmin(admin.ModelAdmin):
     list_display = ('ref_user', 'name')
