@@ -68,7 +68,7 @@ class GraphicCard(models.Model):
 
 class HardDrive(models.Model):
     id_hard_drive = models.AutoField(primary_key=True)
-    size = models.IntegerField(verbose_name=_('size'), help_text=_('in GB'))
+    size = models.IntegerField(verbose_name=_('size'), help_text=_('in GB'), unique=True)
     flash_drive = models.BooleanField(verbose_name=_('ssd'), default=False)
 
     class Meta:
@@ -93,7 +93,7 @@ class Localisation(models.Model):
 
 class Computer(models.Model):
     id_computer = models.AutoField(primary_key=True)
-    serial = models.IntegerField(verbose_name=_('serial_number'), unique=True)
+    serial = models.IntegerField(verbose_name=_('serial_number'), unique=True, blank=True, null=True)
     name = models.CharField(verbose_name=_('name'), max_length=255, blank=True, null=True)
     usage_note = models.TextField(verbose_name=_('usage note'), blank=True, null=True)
     memory_size = models.IntegerField(verbose_name=_('memory size'), help_text=_('in MB'))
