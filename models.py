@@ -110,6 +110,7 @@ class Computer(models.Model):
 
 class Desktop(Computer):
     ref_processor = models.ForeignKey(Processor, verbose_name=_('processor'))
+    ref_graphic_card = models.ForeignKey(GraphicCard, verbose_name=_('graphic card'))
     ref_hard_drive = models.ForeignKey(HardDrive, verbose_name=_('hard drive'), help_text=_('in GB'))
 
     class Meta:
@@ -119,6 +120,7 @@ class Desktop(Computer):
 
 class Laptop(Computer):
     ref_processor = models.ForeignKey(Processor, verbose_name=_('processor'))
+    ref_graphic_card = models.ForeignKey(GraphicCard, verbose_name=_('graphic card'))
     ref_hard_drive = models.ForeignKey(HardDrive, verbose_name=_('hard drive'), help_text=_('in GB'))
 
     class Meta:
