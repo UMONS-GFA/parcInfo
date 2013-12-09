@@ -36,19 +36,21 @@ class ComputerAdmin(admin.ModelAdmin):
 
 
 class DesktopAdmin(admin.ModelAdmin):
-    list_display = ('ref_user', 'name', 'ref_processor', 'memory_size', 'ref_graphic_card', 'ref_hard_drive', 'serial')
+    list_display = ('ref_user', 'name', 'ref_processor', 'memory_size', 'ref_graphic_card', 'ref_hard_drive',
+                    'ref_localisation', 'serial')
     fields = ('serial', 'name', 'ref_user', 'ref_processor', 'memory_size', 'ref_graphic_card', 'ref_hard_drive',
               'ref_localisation', 'usage_note')
 
 
 class LaptopAdmin(admin.ModelAdmin):
-    list_display = ('ref_user', 'name', 'ref_processor', 'memory_size', 'ref_graphic_card', 'ref_hard_drive', 'serial')
+    list_display = ('ref_user', 'name', 'ref_processor', 'memory_size', 'ref_graphic_card', 'ref_hard_drive',
+                    'ref_localisation', 'serial')
     fields = ('serial', 'name', 'ref_user', 'ref_processor', 'memory_size', 'ref_graphic_card', 'ref_hard_drive',
               'ref_localisation', 'usage_note')
 
 
 class ServerAdmin(admin.ModelAdmin):
-    list_display = ('name', 'serial')
+    list_display = ('name', 'serial', 'ref_localisation')
     inlines = (CnxServerProcessorInline, CnxServerGraphicCardInline, CnxServerHardDriveInline,)
 
 admin.site.register(Processor, ProcessorAdmin)
