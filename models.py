@@ -94,7 +94,7 @@ class Localisation(models.Model):
 class Computer(models.Model):
     id_computer = models.AutoField(primary_key=True)
     serial = models.IntegerField(verbose_name=_('serial_number'), unique=True)
-    name = models.CharField(verbose_name=_('name'), max_length=255, unique=True)
+    name = models.CharField(verbose_name=_('name'), max_length=255, blank=True, null=True)
     usage_note = models.TextField(verbose_name=_('usage note'), blank=True, null=True)
     memory_size = models.IntegerField(verbose_name=_('memory size'), help_text=_('in MB'))
     ref_user = models.ForeignKey(User, verbose_name=_('user'))
