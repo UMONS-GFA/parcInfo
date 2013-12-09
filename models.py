@@ -97,7 +97,7 @@ class Computer(models.Model):
     name = models.CharField(verbose_name=_('name'), max_length=255, blank=True, null=True)
     usage_note = models.TextField(verbose_name=_('usage note'), blank=True, null=True)
     memory_size = models.IntegerField(verbose_name=_('memory size'), help_text=_('in MB'))
-    ref_user = models.ForeignKey(User, verbose_name=_('user'))
+    ref_user = models.ForeignKey(User, verbose_name=_('user'), blank=True, null=True)
     localisation = models.ForeignKey(Localisation, verbose_name=_('localisation'))
 
     class Meta:
