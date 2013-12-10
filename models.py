@@ -56,7 +56,7 @@ class GraphicCard(models.Model):
     id_graphic_card = models.AutoField(primary_key=True)
     manufacturer = models.CharField(verbose_name=_('manufacturer'), max_length=255)
     type_graphic_card = models.CharField(verbose_name=_('type'), max_length=255)
-    memory_size = models.IntegerField(verbose_name=_('memory size'), help_text=_('in MB'), blank=True, null=True)
+    memory_size = models.IntegerField(verbose_name=_('memory size'), help_text=_('in mb'), blank=True, null=True)
 
     class Meta:
         verbose_name = _('graphic card')
@@ -68,7 +68,7 @@ class GraphicCard(models.Model):
 
 class HardDrive(models.Model):
     id_hard_drive = models.AutoField(primary_key=True)
-    size = models.IntegerField(verbose_name=_('size'), help_text=_('in GB'), unique=True)
+    size = models.IntegerField(verbose_name=_('size'), help_text=_('in gb'), unique=True)
     flash_drive = models.BooleanField(verbose_name=_('ssd'), default=False)
 
     class Meta:
@@ -96,7 +96,7 @@ class Computer(models.Model):
     serial = models.IntegerField(verbose_name=_('serial_number'), unique=True, blank=True, null=True)
     name = models.CharField(verbose_name=_('name'), max_length=255, blank=True, null=True)
     usage_note = models.TextField(verbose_name=_('usage note'), blank=True, null=True)
-    memory_size = models.IntegerField(verbose_name=_('memory size'), help_text=_('in MB'))
+    memory_size = models.IntegerField(verbose_name=_('memory size'), help_text=_('in mb'))
     ref_user = models.ForeignKey(User, verbose_name=_('user'), blank=True, null=True)
     ref_localisation = models.ForeignKey(Localisation, verbose_name=_('localisation'))
 
@@ -111,7 +111,7 @@ class Computer(models.Model):
 class Desktop(Computer):
     ref_processor = models.ForeignKey(Processor, verbose_name=_('processor'))
     ref_graphic_card = models.ForeignKey(GraphicCard, verbose_name=_('graphic card'))
-    ref_hard_drive = models.ForeignKey(HardDrive, verbose_name=_('hard drive'), help_text=_('in GB'))
+    ref_hard_drive = models.ForeignKey(HardDrive, verbose_name=_('hard drive'), help_text=_('in gb'))
 
     class Meta:
         verbose_name = _('desktop')
@@ -121,7 +121,7 @@ class Desktop(Computer):
 class Laptop(Computer):
     ref_processor = models.ForeignKey(Processor, verbose_name=_('processor'))
     ref_graphic_card = models.ForeignKey(GraphicCard, verbose_name=_('graphic card'))
-    ref_hard_drive = models.ForeignKey(HardDrive, verbose_name=_('hard drive'), help_text=_('in GB'))
+    ref_hard_drive = models.ForeignKey(HardDrive, verbose_name=_('hard drive'), help_text=_('in gb'))
 
     class Meta:
         verbose_name = _('laptop')
@@ -133,7 +133,7 @@ class Server(Computer):
     ref_graphic_card = models.ManyToManyField(GraphicCard, through='CnxServerGraphicCard',
                                               verbose_name=_('graphic card'))
     ref_hard_drive = models.ManyToManyField(HardDrive, through='CnxServerHardDrive', verbose_name=_('hard drive'),
-                                            help_text=_('in GB'))
+                                            help_text=_('in gb'))
 
     class Meta:
         verbose_name = _('server')
