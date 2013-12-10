@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-04 14:17+0100\n"
+"POT-Creation-Date: 2013-12-10 10:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,112 +18,129 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
-#: models.py:8 models.py:21
-msgid "manufacturer"
-msgstr "fabriquant"
+#: models.py:12
+#, fuzzy
+msgid "number of processors"
+msgstr "nombre de processeurs"
 
-#: models.py:9 models.py:22
-msgid "type"
-msgstr "modèle"
-
-#: models.py:12 models.py:63 models.py:72 models.py:81
+#: models.py:15 models.py:48 models.py:112 models.py:122 models.py:132
 msgid "processor"
 msgstr "processeur"
 
-#: models.py:13
+#: models.py:16 models.py:49
 msgid "processors"
 msgstr "processeurs"
 
-#: models.py:23 models.py:51
-msgid "memory size"
-msgstr "quantité de mémoire"
+#: models.py:23
+#, fuzzy
+msgid "number of graphic cards"
+msgstr "cartes graphiques"
 
-#: models.py:23 models.py:51
-msgid "in Mo"
-msgstr "en Mo"
-
-#: models.py:26 models.py:82
+#: models.py:26 models.py:62 models.py:113 models.py:123 models.py:134
 msgid "graphic card"
 msgstr "carte graphique"
 
-#: models.py:27
+#: models.py:27 models.py:63
 msgid "graphic cards"
 msgstr "cartes graphiques"
 
-#: models.py:35
-msgid "size"
-msgstr "taille"
+#: models.py:34
+#, fuzzy
+msgid "number of hard drive"
+msgstr "nombre de disques"
 
-#: models.py:35 models.py:64 models.py:73 models.py:84
-msgid "in Go"
-msgstr "en Go"
-
-#: models.py:36
-msgid "ssd"
-msgstr "ssd"
-
-#: models.py:39 models.py:64 models.py:73 models.py:84
+#: models.py:37 models.py:75 models.py:114 models.py:124 models.py:135
 msgid "hard drive"
 msgstr "disque dur"
 
-#: models.py:40
+#: models.py:38 models.py:76
 msgid "hard drives"
 msgstr "disques durs"
 
-#: models.py:48
+#: models.py:44 models.py:57
+msgid "manufacturer"
+msgstr "fabriquant"
+
+#: models.py:45 models.py:58
+msgid "type"
+msgstr "modèle"
+
+#: models.py:59 models.py:99
+msgid "memory size"
+msgstr "quantité de mémoire"
+
+#: models.py:59 models.py:99
+msgid "in mb"
+msgstr "en Mb"
+
+#: models.py:71
+msgid "size"
+msgstr "taille"
+
+#: models.py:71 models.py:114 models.py:124 models.py:136
+msgid "in gb"
+msgstr "en Gb"
+
+#: models.py:72
+msgid "ssd"
+msgstr "ssd"
+
+#: models.py:84
+msgid "localisation name"
+msgstr "nom de la localisation"
+
+#: models.py:87 models.py:101
+msgid "localisation"
+msgstr "localisation"
+
+#: models.py:88
+msgid "localisations"
+msgstr "localisations"
+
+#: models.py:96
 msgid "serial_number"
 msgstr "numéro de série"
 
-#: models.py:49
+#: models.py:97
 msgid "name"
 msgstr "nom"
 
-#: models.py:50
+#: models.py:98
 msgid "usage note"
 msgstr "note d'utilisation"
 
-#: models.py:52
+#: models.py:100
 msgid "user"
 msgstr "utilisateur"
 
-#: models.py:55
+#: models.py:104
 msgid "computer"
 msgstr "ordinateur"
 
-#: models.py:56
+#: models.py:105
 msgid "computers"
 msgstr "ordinateurs"
 
-#: models.py:67
+#: models.py:117
 msgid "desktop"
 msgstr "ordinateur de bureau"
 
-#: models.py:68
+#: models.py:118
 msgid "desktops"
 msgstr "ordinateurs de bureau"
 
-#: models.py:76
+#: models.py:127
 msgid "laptop"
 msgstr "ordinateur portable"
 
-#: models.py:77
+#: models.py:128
 msgid "laptops"
 msgstr "ordinateurs portables"
 
-#: models.py:83
-msgid "number of disk"
-msgstr "nombre de disques"
-
-#: models.py:87
+#: models.py:139
 msgid "server"
 msgstr "serveur"
 
-#: models.py:88
+#: models.py:140
 msgid "servers"
 msgstr "serveurs"
-
-#~ msgid "mb"
-#~ msgstr "mb"
-
-#~ msgid "MB"
-#~ msgstr "MB"
