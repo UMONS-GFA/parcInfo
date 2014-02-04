@@ -1,3 +1,5 @@
+from __future__ import unicode_literals
+from django.utils.encoding import python_2_unicode_compatible
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
@@ -38,7 +40,7 @@ class CnxServerHardDrive(models.Model):
         verbose_name_plural = _('hard drives')
 # end of connection models
 
-
+@python_2_unicode_compatible
 class Processor(models.Model):
     id_processor = models.AutoField(primary_key=True)
     manufacturer = models.CharField(verbose_name=_('manufacturer'), max_length=255)
@@ -48,10 +50,10 @@ class Processor(models.Model):
         verbose_name = _('processor')
         verbose_name_plural = _('processors')
 
-    def __unicode__(self):
+    def __str__(self):
         return self.manufacturer + " " + self.type_processor
 
-
+@python_2_unicode_compatible
 class GraphicCard(models.Model):
     id_graphic_card = models.AutoField(primary_key=True)
     manufacturer = models.CharField(verbose_name=_('manufacturer'), max_length=255)
@@ -62,10 +64,10 @@ class GraphicCard(models.Model):
         verbose_name = _('graphic card')
         verbose_name_plural = _('graphic cards')
 
-    def __unicode__(self):
+    def __str__(self):
         return self.manufacturer + " " + self.type_graphic_card
 
-
+@python_2_unicode_compatible
 class HardDrive(models.Model):
     id_hard_drive = models.AutoField(primary_key=True)
     size = models.IntegerField(verbose_name=_('size'), help_text=_('in gb'), unique=True)
@@ -75,9 +77,10 @@ class HardDrive(models.Model):
         verbose_name = _('hard drive')
         verbose_name_plural = _('hard drives')
 
-    def __unicode__(self):
-        return unicode(self.size)
+    def __str__(self):
+        return str(self.size)
 
+@python_2_unicode_compatible
 class Localisation(models.Model):
     id_localisation = models.AutoField(primary_key=True)
     localisation_name = models.CharField(max_length=255, verbose_name=_('localisation name'))
@@ -86,10 +89,10 @@ class Localisation(models.Model):
         verbose_name = _('localisation')
         verbose_name_plural = _('localisations')
 
-    def __unicode__(self):
+    def __str__(self):
         return self.localisation_name
 
-
+@python_2_unicode_compatible
 class Computer(models.Model):
     id_computer = models.AutoField(primary_key=True)
     serial = models.IntegerField(verbose_name=_('serial_number'), unique=True, blank=True, null=True)
@@ -103,7 +106,7 @@ class Computer(models.Model):
         verbose_name = _('computer')
         verbose_name_plural = _('computers')
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
 
