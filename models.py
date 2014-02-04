@@ -76,8 +76,7 @@ class HardDrive(models.Model):
         verbose_name_plural = _('hard drives')
 
     def __unicode__(self):
-        return str(self.size)
-
+        return unicode(self.size)
 
 class Localisation(models.Model):
     id_localisation = models.AutoField(primary_key=True)
